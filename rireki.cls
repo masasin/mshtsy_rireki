@@ -16,7 +16,7 @@
 \@foreignfalse
 \@nokanjifalse
 \@twosidetrue
-\@lowresfalse
+\@lowrestrue
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \DeclareOption{afour}{\@afourtrue}
 \DeclareOption{letterpaper}{\@letterpapertrue}
@@ -25,7 +25,7 @@
 \DeclareOption{foreign}{\@foreigntrue}
 \DeclareOption{nokanji}{\@nokanjitrue}
 \DeclareOption{oneside}{\@twosidefalse}
-\DeclareOption{lowres}{\@lowrestrue}
+\DeclareOption{hires}{\@lowresfalse}
 \ProcessOptions\relax
 \LoadClass[twoside, 11pt]{article}
 
@@ -64,9 +64,9 @@
 }
 \usepackage{graphicx}
 \if@lowres
-  \graphicspath{{img-lowres/}}
-\else
   \graphicspath{{img/}}
+\else
+  \graphicspath{{img-hires/}}
 \fi
 
 \usepackage{datetime2}
