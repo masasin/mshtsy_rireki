@@ -35,9 +35,10 @@
 \setmainfont{Linux Libertine O}
 \setromanfont{Linux Libertine O}
 \setsansfont{Linux Biolinum O}
-\setmonofont{Inconsolata}
+\setmonofont{DejaVu Sans Code}
 \usepackage{xeCJK}
-\setCJKmainfont{IPAGothic}
+\setCJKmainfont{IPAMincho}
+\setCJKsansfont{IPAGothic}
 \usepackage{xunicode} % extra support for unicode
 \XeTeXlinebreaklocale "ja"
 \XeTeXlinebreakskip=0pt plus 1pt
