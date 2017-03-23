@@ -38,7 +38,7 @@
 \setmonofont{DejaVu Sans Code}
 \usepackage{xeCJK}
 \setCJKmainfont{IPAMincho}
-\setCJKsansfont{IPAGothic}
+\setCJKsansfont{IPAMincho}
 \usepackage{xunicode} % extra support for unicode
 \XeTeXlinebreaklocale "ja"
 \XeTeXlinebreakskip=0pt plus 1pt
