@@ -82,6 +82,8 @@
 }
 \DTMsetdatestyle{nengodate}
 
+\usepackage[hidelinks]{hyperref}
+
 \if@letterpaper
   \setlength{\paperwidth}{8.5in}
   \setlength{\paperheight}{11in}
@@ -177,6 +179,8 @@
 \newcommand\kana@address\@empty
 \newcommand\@postalcode\@empty
 \newcommand\@phone\@empty
+\newcommand\@email\@empty
+\newcommand\@github\@empty
 \newcommand\@otheraddress\@empty
 \newcommand\kana@otheraddress\@empty
 \newcommand\@otherpostalcode\@empty
@@ -295,7 +299,7 @@
     \Put(20,48){\makebox(148,5)[lb]{\@address}}
     \Put(0,50){\line(1,0){151}}
     \Put(1,51){\makebox(0,0)[tl]{\scriptsize\contactstr}}
-    \Put(5,56){\makebox(151,6)[l]{\small\@phone\@email}}
+    \Put(5,56){\makebox(151,6)[l]{\small\@phone\@email\@github}}
     \Put(0,56){\line(1,0){151}}
     \Put(0,61){\dashbox{.5}(151,5)[l]{\hspace{1mm}\scriptsize\kanastr}}
     \Put(20,61){\makebox(0,5)[l]{\scriptsize\kana@otheraddress}}
@@ -449,8 +453,9 @@
 }
 
 \newcommand{\postalcode}[1]{\gdef\@postalcode{\texttt{#1}}}
-\newcommand{\phone}[1]{\gdef\@phone{\hskip 24pt 電話: \texttt{#1}}}
-\newcommand{\email}[1]{\gdef\@email{\hskip 24pt メール: \texttt{#1}}}
+\newcommand{\phone}[1]{\gdef\@phone{\hskip 24pt 電話: \texttt{\href{tel:#1}{#1}}}}
+\newcommand{\email}[1]{\gdef\@email{\hskip 24pt メール: \texttt{\href{mailto:#1}{#1}}}}
+\newcommand{\github}[1]{\gdef\@github{\hskip 24pt GitHub: \texttt{\href{https://github.com/#1}{#1}}}}
 
 \newcommand{\otheraddress}[2] {
   \gdef\@otheraddress{#1}
@@ -458,8 +463,7 @@
 }
 
 \newcommand{\otherpostalcode}[1]{\gdef\@otherpostalcode{\texttt{#1}}}
-\newcommand{\otherphone}[1]{\gdef\@otherphone{\hskip 24pt 電話: \texttt{#1}}}
-
+\newcommand{\otherphone}[1]{\gdef\@otherphone{\hskip 24pt 電話: \texttt{\href{tel:#1}{#1}}}}
 \newcounter{agecounter}
 \newcommand{\birthday}[3]{
   \gdef\@birthday{\DTMdisplaydate{#1}{#2}{#3}生}
@@ -494,11 +498,12 @@
   \gdef\@guardian{#1}
   \gdef\kana@guardian{#2}
 }
+\newcommand{\guardianpostalcode}[1]{\gdef\@guardianpostalcode{\texttt{#1}}}
 \newcommand{\guardianaddress}[2] {
-  \gdef\@aguardianddress{#1}
-  \gdef\kana@aguardianddress{#2}
+  \gdef\@guardianaddress{#1}
+  \gdef\kana@guardianaddress{#2}
 }
-\newcommand{\guardianphone}[1]{\gdef\@guardianphone{\hskip 24pt 電話: \texttt{#1}}}
+\newcommand{\guardianphone}[1]{\gdef\@guardianphone{\hskip 24pt 電話: \texttt{\href{tel:#1}{#1}}}}
 
 % List output command
 \newcommand{\PutListEntry}[4]{
@@ -540,7 +545,7 @@
 \newcommand{\kanastr}{ふりがな}
 \newcommand{\addressstr}{現~住~所}
 \newcommand{\otheraddressstr}{連~絡~先}
-\newcommand{\contactstr}{電話など}
+\newcommand{\contactstr}{連絡先等}
 \newcommand{\birthdaystr}{生年月日}
 \newcommand{\genderstr}{性別}
 \newcommand{\backgroundstr}{学歴・職歴}
