@@ -544,7 +544,7 @@
 \newcommand{\kanastr}{ふりがな}
 \newcommand{\addressstr}{現~住~所}
 \newcommand{\otheraddressstr}{連~絡~先}
-\newcommand{\contactstr}{電話など}
+\newcommand{\contactstr}{連絡先等}
 \newcommand{\birthdaystr}{生年月日}
 \newcommand{\genderstr}{性別}
 \newcommand{\backgroundstr}{学歴・職歴}
