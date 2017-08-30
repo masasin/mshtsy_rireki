@@ -498,9 +498,10 @@
   \gdef\@guardian{#1}
   \gdef\kana@guardian{#2}
 }
+\newcommand{\guardianpostalcode}[1]{\gdef\@guardianpostalcode{\texttt{#1}}}
 \newcommand{\guardianaddress}[2] {
-  \gdef\@aguardianddress{#1}
-  \gdef\kana@aguardianddress{#2}
+  \gdef\@guardianaddress{#1}
+  \gdef\kana@guardianaddress{#2}
 }
 \newcommand{\guardianphone}[1]{\gdef\@guardianphone{\hskip 24pt 電話: \texttt{\href{tel:#1}{#1}}}}
 
