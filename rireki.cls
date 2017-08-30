@@ -453,7 +453,7 @@
 }
 
 \newcommand{\postalcode}[1]{\gdef\@postalcode{\texttt{#1}}}
-\newcommand{\phone}[1]{\gdef\@phone{\hskip 24pt 電話: \texttt{#1}}}
+\newcommand{\phone}[1]{\gdef\@phone{\hskip 24pt 電話: \texttt{\href{tel:#1}{#1}}}}
 \newcommand{\email}[1]{\gdef\@email{\hskip 24pt メール: \texttt{\href{mailto:#1}{#1}}}}
 \newcommand{\github}[1]{\gdef\@github{\hskip 24pt GitHub: \texttt{\href{https://github.com/#1}{#1}}}}
 
