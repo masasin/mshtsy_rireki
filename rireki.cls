@@ -82,6 +82,8 @@
 }
 \DTMsetdatestyle{nengodate}
 
+\usepackage{hyperref}
+
 \if@letterpaper
   \setlength{\paperwidth}{8.5in}
   \setlength{\paperheight}{11in}
@@ -295,7 +297,7 @@
     \Put(20,48){\makebox(148,5)[lb]{\@address}}
     \Put(0,50){\line(1,0){151}}
     \Put(1,51){\makebox(0,0)[tl]{\scriptsize\contactstr}}
-    \Put(5,56){\makebox(151,6)[l]{\small\@phone\@email}}
+    \Put(5,56){\makebox(151,6)[l]{\small\@phone\@email\@github}}
     \Put(0,56){\line(1,0){151}}
     \Put(0,61){\dashbox{.5}(151,5)[l]{\hspace{1mm}\scriptsize\kanastr}}
     \Put(20,61){\makebox(0,5)[l]{\scriptsize\kana@otheraddress}}
@@ -451,6 +453,7 @@
 \newcommand{\postalcode}[1]{\gdef\@postalcode{\texttt{#1}}}
 \newcommand{\phone}[1]{\gdef\@phone{\hskip 24pt 電話: \texttt{#1}}}
 \newcommand{\email}[1]{\gdef\@email{\hskip 24pt メール: \texttt{#1}}}
+\newcommand{\github}[1]{\gdef\@github{\hskip 24pt GitHub: \href{https://github.com/#1}{\texttt{#1}}}}
 
 \newcommand{\otheraddress}[2] {
   \gdef\@otheraddress{#1}
