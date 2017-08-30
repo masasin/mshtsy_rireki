@@ -463,8 +463,7 @@
 }
 
 \newcommand{\otherpostalcode}[1]{\gdef\@otherpostalcode{\texttt{#1}}}
-\newcommand{\otherphone}[1]{\gdef\@otherphone{\hskip 24pt 電話: \texttt{#1}}}
-
+\newcommand{\otherphone}[1]{\gdef\@otherphone{\hskip 24pt 電話: \texttt{\href{tel:#1}{#1}}}}
 \newcounter{agecounter}
 \newcommand{\birthday}[3]{
   \gdef\@birthday{\DTMdisplaydate{#1}{#2}{#3}生}
@@ -503,7 +502,7 @@
   \gdef\@aguardianddress{#1}
   \gdef\kana@aguardianddress{#2}
 }
-\newcommand{\guardianphone}[1]{\gdef\@guardianphone{\hskip 24pt 電話: \texttt{#1}}}
+\newcommand{\guardianphone}[1]{\gdef\@guardianphone{\hskip 24pt 電話: \texttt{\href{tel:#1}{#1}}}}
 
 % List output command
 \newcommand{\PutListEntry}[4]{
