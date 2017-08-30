@@ -179,6 +179,8 @@
 \newcommand\kana@address\@empty
 \newcommand\@postalcode\@empty
 \newcommand\@phone\@empty
+\newcommand\@email\@empty
+\newcommand\@github\@empty
 \newcommand\@otheraddress\@empty
 \newcommand\kana@otheraddress\@empty
 \newcommand\@otherpostalcode\@empty
