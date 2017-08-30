@@ -82,7 +82,7 @@
 }
 \DTMsetdatestyle{nengodate}
 
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 
 \if@letterpaper
   \setlength{\paperwidth}{8.5in}
