@@ -37,8 +37,8 @@
 \setsansfont{Linux Biolinum O}
 \setmonofont{DejaVu Sans Code}
 \usepackage{xeCJK}
-\setCJKmainfont{IPAMincho}
-\setCJKsansfont{IPAMincho}
+\setCJKmainfont[BoldFont=YuMincho Demibold]{YuMincho Medium}
+\setCJKsansfont[BoldFont=YuGothic Bold]{YuGothic Medium}
 \usepackage{xunicode} % extra support for unicode
 \XeTeXlinebreaklocale "ja"
 \XeTeXlinebreakskip=0pt plus 1pt
