@@ -181,6 +181,7 @@
 \newcommand\@phone\@empty
 \newcommand\@email\@empty
 \newcommand\@github\@empty
+\newcommand\@linkedin\@empty
 \newcommand\@otheraddress\@empty
 \newcommand\kana@otheraddress\@empty
 \newcommand\@otherpostalcode\@empty
@@ -299,7 +300,7 @@
     \Put(20,48){\makebox(148,5)[lb]{\@address}}
     \Put(0,50){\line(1,0){151}}
     \Put(1,51){\makebox(0,0)[tl]{\scriptsize\contactstr}}
-    \Put(5,56){\makebox(151,6)[l]{\small\@phone\@email\@github}}
+    \Put(12,56){\makebox(137,6)[l]{\footnotesize\@phone\hfill\@email\hfill\@github\hfill\@linkedin}}
     \Put(0,56){\line(1,0){151}}
     \Put(0,61){\dashbox{.5}(151,5)[l]{\hspace{1mm}\scriptsize\kanastr}}
     \Put(20,61){\makebox(0,5)[l]{\scriptsize\kana@otheraddress}}
@@ -453,9 +454,10 @@
 }
 
 \newcommand{\postalcode}[1]{\gdef\@postalcode{\texttt{#1}}}
-\newcommand{\phone}[1]{\gdef\@phone{\hskip 24pt 電話: \texttt{\href{tel:#1}{#1}}}}
-\newcommand{\email}[1]{\gdef\@email{\hskip 24pt メール: \texttt{\href{mailto:#1}{#1}}}}
-\newcommand{\github}[1]{\gdef\@github{\hskip 24pt GitHub: \texttt{\href{https://github.com/#1}{#1}}}}
+\newcommand{\phone}[1]{\gdef\@phone{電話: \texttt{\href{tel:#1}{#1}}}}
+\newcommand{\email}[1]{\gdef\@email{メール: \texttt{\href{mailto:#1}{#1}}}}
+\newcommand{\github}[1]{\gdef\@github{GitHub: \texttt{\href{https://github.com/#1}{#1}}}}
+\newcommand{\linkedin}[1]{\gdef\@linkedin{LinkedIn: \texttt{\href{https://linkedin.com/in/#1/?locale=ja_JP}{#1}}}}
 
 \newcommand{\otheraddress}[2] {
   \gdef\@otheraddress{#1}
