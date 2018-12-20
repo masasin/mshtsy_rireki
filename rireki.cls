@@ -31,7 +31,7 @@
 
 \usepackage{xltxtra}
 \gdef\@normalsize{11pt}
-\defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text}
+\defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text, StylisticSet=5}
 \setmainfont{Linux Libertine O}
 \setromanfont{Linux Libertine O}
 \setsansfont{Linux Biolinum O}
