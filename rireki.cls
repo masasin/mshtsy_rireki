@@ -564,7 +564,7 @@
   その他についての希望などがあれば記入）}
 \newcommand{\guardianstr}{保護者 (本人が未成年の場合のみ記入)}
 \newcommand{\commutestr}{通勤時間}
-\newcommand{\dependentsstr}{扶養家族数}
+\newcommand{\dependentsstr}{扶養家族数（配偶者を除く）}
 \newcommand{\spousestr}{配偶者}
 \newcommand{\spousedependencestr}{配偶者の扶養義務}
 
