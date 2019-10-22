@@ -61,7 +61,7 @@
     令和
   \fi
   \ifnum\@tempcnta=1
-    元
+    元\kern-0.6mm
   \else
     \the\@tempcnta
   \fi}
