@@ -53,9 +53,12 @@
   \ifnum\@tempcnta<1989
     \advance\@tempcnta by -1925
     昭和
-  \else
+  \else\ifnum\@tempcnta<2019
     \advance\@tempcnta by -1988
     平成
+  \else
+    \advance\@tempcnta by -2018
+    令和
   \fi
   \ifnum\@tempcnta=1
     元
